@@ -8,8 +8,7 @@
 		<div id="app">
 			
 			<h1>猜数字小游戏</h1><br>
-			<h1>{{keynum}}</h1><br>
-			请输入你的猜测(1-10)<input v-model="usernum" />
+			请输入你的猜测(0-9)<input v-model="usernum" />
 			<p v-if="keynum==usernum">恭喜你猜对了，你真是个小天才</p>
 			<p v-if="keynum<usernum">猜大了</p>
 			<p v-if="keynum>usernum">猜小了</p>
