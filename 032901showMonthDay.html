@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>月份天数输出</title>
+	</head>
+	<body>
+		<div id="app">
+			<input v-model="message"/><br>
+			<p v-for="(item) in first"><span v-if="item.name==message">{{message}}月份有31天</span></p>
+			<p v-for="(item) in second"><span v-if="item.name==message">{{message}}月份有30天</span></p>
+			<p v-if="message==2">{{message}}月份有28天</p>
+			
+		</div>
+		
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var vm=new Vue({
+				el:'#app',
+				data:{
+					message:'',
+					first:[
+						{
+							name:'1'
+						},
+						{
+							name:'3'
+						},
+						{
+							name:'5'
+						},
+						{
+							name:'7'
+						},
+						{
+							name:'8'
+						},
+						{
+							name:'12'
+						},
+					],
+					second:[
+						{
+							name:'4'
+						},
+						{
+							name:'6'
+						},
+						{
+							name:'9'
+						},
+						{
+							name:'10'
+						},
+						{
+							name:'11'
+						},
+					]
+				}
+			})
+		</script>
+	</body>
+</html>
