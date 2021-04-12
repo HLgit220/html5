@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>hello</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input v-model="inputcode" type="text"/>
+			<div v-for="country in countries">
+				<div v-if="inputcode==country.code">
+					国家名：{{country.name}}<br>
+					首都：{{country.shoudu}}<br>
+					国家代码：{{country.code}}
+				</div>
+			</div>
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+				inputcode:'',
+				countries:[
+					{'name':'中国','code':'100','shoudu':'北京'},
+					{'name':'美国','code':'101','shoudu':'纽约'},
+					{'name':'日本','code':'102','shoudu':'东京'},
+					{'name':'德国','code':'103','shoudu':'柏林'},
+					{'name':'韩国','code':'104','shoudu':'首尔'},
+				]
+				}
+			})
+			
+		</script>
+	</body>
+</html>
